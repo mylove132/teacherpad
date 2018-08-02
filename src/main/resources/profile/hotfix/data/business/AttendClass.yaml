@@ -1,0 +1,24 @@
+author: liuzhanhui
+date: 2018-04-09
+page: 上课事务元素
+element:
+  -
+   name: ATTEND_CLASS_TEXVIEW
+   type: ID
+   locator: com.okay.classroom:id/middle_text
+   description: 上课栏标题
+  -
+   name: BACK_BUTTON
+   type: ID
+   locator: com.okay.classroom:id/back_btn
+   description: 返回按钮
+  -
+   name: SUBJECT_MENU_BAR
+   type: ID
+   locator: com.okay.classroom:id/subject_list
+   description: 科目菜单栏
+  -
+   name: SUBJECT_VIEWS
+   type: ID
+   locator: com.okay.classroom:id/oklib_subject_view
+   description: 科目ID

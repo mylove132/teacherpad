@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.okay.qa.*"></context:component-scan>
+    <!-- 开启组件扫描 -->
+    <context:annotation-config>
+    <!--开启注解处理器-->
+     </context:annotation-config>
+
+    <!--初始化占位符的值-->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+       <property name="locations" ref="propertyResources"></property>
+    </bean>
+
+    <bean id="propertyResources" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <value>classpath:con*.properties</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!--配置文件-->
+    <bean id="configSource" class="com.okay.qa.domain.ConfigEntity">
+        <property name="waitTimeOut" value="${waitTimeOut}"></property>
+        <property name="username" value="${username}"></property>
+        <property name="password" value="${password}"></property>
+        <property name="appActivity" value="${appActivity}"></property>
+        <property name="appPackage" value="${appPackage}"></property>
+        <property name="deviceName" value="${deviceName}"></property>
+        <property name="noReset" value="${noReset}"></property>
+        <property name="noSign" value="${noSign}"></property>
+        <property name="platformName" value="${platformName}"></property>
+        <property name="platformVersion" value="${platformVersion}"></property>
+        <property name="resetKeyboard" value="${resetKeyboard}"></property>
+        <property name="unicodeKeyboard" value="${unicodeKeyboard}"></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,24 @@
+author: liuzhanhui
+date: 2018-04-09
+page: 上课事务元素
+element:
+  -
+   name: ATTEND_LESSON_GROUP
+   type: XPATH
+   locator: //android.view.ViewGroup/android.appwidget.AppWidgetHostView[1]
+   description: 备课标题
+  -
+   name: ATTEND_CLASS_GROUP
+   type: XPATH
+   locator: //android.view.ViewGroup/android.appwidget.AppWidgetHostView[2]
+   description: 上课标题
+  -
+   name: ATTEND_CORRECT_GROUP
+   type: XPATH
+   locator: //android.view.ViewGroup/android.appwidget.AppWidgetHostView[2]
+   description: 批改标题
+  -
+   name: SUBJECT_VIEWS
+   type: ID
+   locator: com.okay.classroom:id/oklib_subject_view
+   description: 科目ID

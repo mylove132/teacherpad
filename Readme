@@ -1,0 +1,50 @@
+com.okay.qa.common --- 项目通用包
+                   AppiumDriverWairt --- 改造selenium的WebDriver中智能等待方法
+                   ExpectedCondition --- 改造智能等待的接口
+
+com.okay.qa.domain --- 项目实体包
+                   ConfigEntity 配置文件的实体
+                   PageEntity 页面实体
+                   ElementEntity 元素实体
+                   TYPE 元素的定位方式
+
+com.okay.qa.pages --- 页面包
+                      -- business 场景
+                      -- monitor 监控
+                          BasePage 页面的基类（包含appium Api的改造）
+
+com.okay.qa.service --- 事务类
+                      -- business 场景
+                      -- monitor 监控
+
+com.okay.qa.system  --- 系统包
+                      AndroidDriverFactory android服务
+
+com.okay.qa.usecase  --- 用例包
+                       -- business 场景
+                       -- monitor 监控
+                           BaseCase用例的基类
+
+com.okay.qa.utils  --- 工具包
+                    DateTools 日期工具类
+                    ResourceUtils 路径工具类
+                    SpringTool spring测试工具
+                    YamlUtils yaml文件工具类
+
+配置文件
+resources:    profile
+                  ---dev
+                      data
+                         -- business 场景页面元素
+                         -- monitor 监控页面元素
+                      applicationContext.xml spring配置文件
+                  ---hotfix
+                       data
+                          -- business 场景页面元素
+                          -- monitor 监控页面元素
+                       applicationContext.xml spring配置文件
+                  ---online
+                       data
+                          -- business 场景页面元素
+                          -- monitor 监控页面元素
+                        applicationContext.xml spring配置文件

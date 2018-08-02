@@ -1,0 +1,19 @@
+author: liuzhanhui
+date: 2018-04-09
+page: 登录场景元素
+element:
+  -
+   name: LOGIN_USER_EDIT
+   type: XPATH
+   locator: //android.widget.EditText[@resource-id='com.okay.teacherapp:id/et_inputokayid']
+   description: 登录输入框
+  -
+   name: LOGIN_PASSWORD_EDIT
+   type: XPATH
+   locator: //android.widget.ScrollView[@resource-id='com.okay.teacherapp:id/sv_content']
+   description: 登录密码框
+  -
+   name: LOGIN_LOGIN_BUTTON
+   type: XPATH
+   locator: //android.widget.Button[@resource-id='com.okay.teacherapp:id/btn_login']
+   description: 登录按钮
